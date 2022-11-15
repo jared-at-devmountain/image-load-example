@@ -9,9 +9,11 @@ app.use('/client', express.static(path.join(__dirname, '../client')))
 
 app.post('/submit', (req, res) => {
     let file = req.files.imageFile
+    let { other } = req.body
 
     //save file to db here:
     console.log(file)
+    console.log(other)
 
     res.send('image processed')
 })

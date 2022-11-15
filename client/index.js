@@ -6,6 +6,7 @@ function submitFile() {
 
     let formData = new FormData()
     formData.append('imageFile', theFile)
+    formData.append('other', "some other data")
 
     axios.post('/submit', formData)
     .then(res => {
